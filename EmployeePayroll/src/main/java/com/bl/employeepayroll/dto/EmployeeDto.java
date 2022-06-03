@@ -1,16 +1,24 @@
 package com.bl.employeepayroll.dto;
 
-import lombok.Data;
+import java.time.LocalDate;
+import java.util.List;
 
-@Data
+import com.bl.employeepayroll.model.Department;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@Getter
+@Setter
 public class EmployeeDto {
 	
-	private int id;
 	private String name;
+	private String profileImage;
+	private List<Department> department;
 	private String gender;
 	private int salary;
-	private int startDay;
-	private int month;
-	private int year;
+	private LocalDate startDate;
 	private String note;
 }
